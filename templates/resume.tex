@@ -75,20 +75,26 @@
 
     {% for subSection in section.subSections %}
 
+        {% if loop.first %} \vspace{-2pt} {% endif %}
+
         \item
         \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
         {% raw %}\textit{\small{{% endraw %} {{ subSection.header.left }} }} &  {% raw %}\textit{\small{{% endraw %}{{ subSection.header.right }} }}\\
         \end{tabular*}\vspace{-7pt}
 
-        \begin{itemize}
+        {% if subSection.items | length > 0 %}
 
-        {% for item in subSection.items %}
+          \begin{itemize}
 
-             \item\small{% raw %}{{% endraw %}{{ item.item }} } \vspace{-2pt}
+          {% for item in subSection.items %}
 
-        {% endfor %}
+              \item\small{% raw %}{{% endraw %}{{ item }}} \vspace{-2pt}
 
-        \end{itemize}\vspace{-5pt}
+          {% endfor %}
+
+          \end{itemize}\vspace{-5pt}
+
+        {% endif %}
 
     {% endfor %}
 
