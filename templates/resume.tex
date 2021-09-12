@@ -68,10 +68,16 @@
 
     \begin{itemize}[leftmargin=0.15in, label={}]
 
-    \vspace{-2pt}\item
+    \vspace{-2pt}
+
+    \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    {% raw %}\textbf{{% endraw %}{{ section.header.left }}} & {{ section.header.right }}\\
-    \end{tabular*}\vspace{-7pt}
+
+      {% raw %}\textbf{{% endraw %}{{ section.header.left }}} & {{ section.header.right }}\\
+
+    \end{tabular*}
+
+    \vspace{-7pt}
 
     {% for subSection in section.subSections %}
 
@@ -79,8 +85,12 @@
 
         \item
         \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        {% raw %}\textit{\small{{% endraw %} {{ subSection.header.left }} }} &  {% raw %}\textit{\small{{% endraw %}{{ subSection.header.right }} }}\\
-        \end{tabular*}\vspace{-7pt}
+
+          {% raw %}\textit{\small{{% endraw %}{{ subSection.header.left }}}} &  {% raw %}\textit{\small{{% endraw %}{{ subSection.header.right }}}}\\
+
+        \end{tabular*}
+
+        \vspace{-7pt}
 
         {% if subSection.items | length > 0 %}
 
@@ -88,11 +98,15 @@
 
           {% for item in subSection.items %}
 
-              \item\small{% raw %}{{% endraw %}{{ item }}} \vspace{-2pt}
+              \item\small{% raw %}{{% endraw %}{{ item }}}
+
+              \vspace{-2pt}
 
           {% endfor %}
 
-          \end{itemize}\vspace{-5pt}
+          \end{itemize}
+
+          \vspace{-5pt}
 
         {% endif %}
 

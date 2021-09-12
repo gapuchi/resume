@@ -28,7 +28,7 @@ let educuation
         [ { header =
             { left =
                 "Bachelor of Science in Computer Science with a Double in Economics"
-            , right = "August 2013 - May 2017"
+            , right = "August 2013 -- May 2017"
             }
           , items = [] : List Text
           }
@@ -39,7 +39,7 @@ let amazonSde
     : ResumeSubSection
     = { header =
         { left = "Software Development Engineer"
-        , right = "August 2017 - Present"
+        , right = "August 2017 -- Present"
         }
       , items =
         [ "Developed a system that maps over 30 billion products to an Amazon brand database daily to discover products and brands not present in the Amazon Catalog and to determine brands’ selling potentials"
@@ -50,11 +50,26 @@ let amazonSde
         ]
       }
 
+let amazonIntern
+    : ResumeSubSection
+    = { header =
+        { left = "Software Development Intern"
+        , right = "August 2017 -- Present"
+        }
+      , items =
+        [ "Worked on the Ad Products team to create a page for advertisers to preview their ads collectively"
+        , "Maintained site consistency by working with a Sr. UX designer to create the page layout and view"
+        , "Ensured highest usability of the application by seeking feedback from stakeholders from 3 other teams"
+        , "Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads"
+        , "Deployed the project into production and documented my work for future development"
+        ]
+      }
+
 let experience
     : ResumeSection
     = { title = "Experience"
       , header = { left = "Amazon", right = "Seattle, WA" }
-      , subSections = [ amazonSde ]
+      , subSections = [ amazonSde, amazonIntern ]
       }
 
 let resume
