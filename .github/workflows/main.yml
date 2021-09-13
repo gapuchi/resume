@@ -15,12 +15,17 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      
-      - name: Install Rust Binary
-        run: cargo install dhall-to-resume
+
+      - name: Generate Latex Doc
+        run:  ls -al $GITHUB_WORKSPACE
       
       - name: Generate Latex Doc
-        run:  ~/.cargo/bin/dhall-to-resume config/resume.dhall
+        run:  ls -al $GITHUB_WORKSPACE/config
+  
+      - name: Generate Latex Doc
+        run:  |
+          cargo install dhall-to-resume
+          $HOME/.cargo/bin/dhall-to-resume $GITHUB_WORKSPACE/config/resume.dhall
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
