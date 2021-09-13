@@ -16,8 +16,11 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       
-      - name: Run Rust Binary
-        run: cargo run
+      - name: Install Rust Binary
+        run: cargo install dhall-to-resume
+      
+      - name: Generate Latex Doc
+        run:  ~/.cargo/bin/dhall-to-resume config/resume.dhall
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
