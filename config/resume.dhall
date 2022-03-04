@@ -1,3 +1,11 @@
+let Name
+    : Type
+    = { first  : Text, last : Text }
+
+let User
+    : Type
+    = { name : Name, url : Text, email : Text, phone : Text }
+
 let LeftRightHeader
     : Type
     = { left : Text, right : Text }
@@ -15,7 +23,7 @@ let ResumeSection
 
 let Resume
     : Type
-    = { sections : List ResumeSection }
+    = { user : User, sections : List ResumeSection }
 
 let educuation
     : ResumeSection
@@ -72,8 +80,19 @@ let experience
       , subSections = [ amazonSde, amazonIntern ]
       }
 
+let user
+    : User
+    = { name =
+        { first = "Arjun"
+        , last = "Adhia"
+        }
+      , url = "https://arjun.adhia.net/"
+      , email = "arjun.adhia@gmail.com"
+      , phone = "704-658-6570"
+      }
+
 let resume
     : Resume
-    = { sections = [ educuation, experience ] }
+    = { user = user, sections = [ educuation, experience ] }
 
 in  resume
