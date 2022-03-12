@@ -1,33 +1,4 @@
-let Name
-    : Type
-    = { first  : Text, last : Text }
-
-let User
-    : Type
-    = { name : Name, url : Text, email : Text, phone : Text }
-
-let LeftRightHeader
-    : Type
-    = { left : Text, right : Text }
-
-let ResumeSubSection
-    : Type
-    = { header : LeftRightHeader, items : List Text }
-
-let ResumeSection
-    : Type
-    = { title : Text
-      , header : LeftRightHeader
-      , subSections : List ResumeSubSection
-      }
-
-let Resume
-    : Type
-    = { user : User, sections : List ResumeSection }
-
-let educuation
-    : ResumeSection
-    = { title = "Education"
+let educuation = { title = "Education"
       , header =
         { left = "University of North Carolina at Chapel Hill"
         , right = "Chapel Hill, NC"
@@ -43,9 +14,7 @@ let educuation
         ]
       }
 
-let amazonSde
-    : ResumeSubSection
-    = { header =
+let amazonSde = { header =
         { left = "Software Development Engineer"
         , right = "August 2017 -- Present"
         }
@@ -58,41 +27,37 @@ let amazonSde
         ]
       }
 
-let amazonIntern
-    : ResumeSubSection
-    = { header =
-        { left = "Software Development Intern"
-        , right = "August 2017 -- Present"
-        }
-      , items =
-        [ "Worked on the Ad Products team to create a page for advertisers to preview their ads collectively"
-        , "Maintained site consistency by working with a Sr. UX designer to create the page layout and view"
-        , "Ensured highest usability of the application by seeking feedback from stakeholders from 3 other teams"
-        , "Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads"
-        , "Deployed the project into production and documented my work for future development"
-        ]
-      }
+let amazonIntern = { 
+  header = { left = "Software Development Intern", right = "August 2017 -- Present" }
+  , items =
+    [ 
+      "Worked on the Ad Products team to create a page for advertisers to preview their ads collectively"
+      , "Maintained site consistency by working with a Sr. UX designer to create the page layout and view"
+      , "Ensured highest usability of the application by seeking feedback from stakeholders from 3 other teams"
+      , "Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads"
+      , "Deployed the project into production and documented my work for future development"
+    ]
+}
 
-let experience
-    : ResumeSection
-    = { title = "Experience"
-      , header = { left = "Amazon", right = "Seattle, WA" }
-      , subSections = [ amazonSde, amazonIntern ]
-      }
+let experience = { 
+  title = "Experience"
+  , header = { left = "Amazon", right = "Seattle, WA" }
+  , subSections = [ amazonSde, amazonIntern ]
+}
 
-let user
-    : User
-    = { name =
-        { first = "Arjun"
-        , last = "Adhia"
-        }
-      , url = "https://arjun.adhia.net/"
-      , email = "arjun.adhia@gmail.com"
-      , phone = "704-658-6570"
-      }
+let user = { 
+  name =
+    { first = "Arjun"
+    , last = "Adhia"
+    }
+  , url = "https://arjun.adhia.net/"
+  , email = "arjun.adhia@gmail.com"
+  , phone = "704-658-6570"
+}
 
-let resume
-    : Resume
-    = { user = user, sections = [ educuation, experience ] }
+let resume = {
+  user = user,
+  sections = [ educuation, experience ]
+}
 
 in  resume
