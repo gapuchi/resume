@@ -1,11 +1,8 @@
 let educuation = { title = "Education"
-      , header =
-        { left = "University of North Carolina at Chapel Hill"
-        , right = "Chapel Hill, NC"
-        }
+      , header = Some { left = "University of North Carolina at Chapel Hill", right = "Chapel Hill, NC" }
       , subSections =
         [ { header =
-            { left =
+            Some { left =
                 "Bachelor of Science in Computer Science and Economics, Minor in Mathematics"
             , right = "August 2013 -- May 2017"
             }
@@ -15,7 +12,7 @@ let educuation = { title = "Education"
       }
 
 let emrSde = {
-  header = { left = "Software Development Engineer - AWS Elastic Map Reduce", right = "April 2021 -– Present" }
+  header = Some { left = "Software Development Engineer - AWS Elastic Map Reduce", right = "April 2021 -- Present" }
   , items =
     [
       "Launched a new AWS EMR offering, EMR Serverless, enabling clients to run EMR jobs without having to setup, maintain, or configure the runtime environment."
@@ -27,7 +24,7 @@ let emrSde = {
 }
 
 let ubcSde = { 
-  header = { left = "Software Development Engineer - Selection Monitoring", right = "August 2017 -– April 2021" }
+  header = Some { left = "Software Development Engineer - Selection Monitoring", right = "August 2017 -- April 2021" }
   , items =
     [
       "Developed a system that maps over 30 billion products to an Amazon brand database daily to discover products and brands not present in the Amazon Catalog and to determine brands’ selling potentials"
@@ -39,7 +36,7 @@ let ubcSde = {
   }
 
 let amazonIntern = { 
-  header = { left = "Software Development Intern - Advertising Platform", right = "May 2016 -– August 2016" }
+  header = Some { left = "Software Development Intern - Advertising Platform", right = "May 2016 -- August 2016" }
   , items =
     [ 
       "Worked on the Ad Products team to create a page for advertisers to preview their ads collectively"
@@ -52,12 +49,12 @@ let amazonIntern = {
 
 let experience = { 
   title = "Experience"
-  , header = { left = "Amazon", right = "Seattle, WA" }
+  , header = Some { left = "Amazon", right = "Seattle, WA" }
   , subSections = [ emrSde, ubcSde, amazonIntern ]
 }
 
 let techList = {
-  header = { left = "Amazon", right = "Seattle, WA" }
+  header = None { left: Text, right: Text }
   , items = 
   [
     "Languages – Java, Scala, SQL, JavaScript, TypeScript, Python, C/C++, GoLang, Rust"
@@ -68,7 +65,7 @@ let techList = {
 
 let tech = { 
   title = "Technologies"
-  , header = { left = "Amazon", right = "Seattle, WA" }
+  , header = None { left: Text, right: Text }
   , subSections = [ techList ]
 }
 
