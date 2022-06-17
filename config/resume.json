@@ -142,15 +142,17 @@
   ],
   "projects": [
     {
-      "name": "dhall-to-resume",
-      "description": "Created a Rust binary that takes in a Dhall config file and autmoatically generates a LaTex resume to simplify resume configuration. Used this library and GitHub workflows to automatically generate this resume.",
-      "entity": "Entity",
+      "name": "jsonresume-renderer",
+      "startDate": "2022-06",
+      "url": "https://github.com/gapuchi/jsonresume-renderer",
+      "description": "Created a Rust binary that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.",
       "type": "application"
     },
     {
       "name": "mafiaBot",
+      "startDate": "2019-05",
+      "url": "https://github.com/gapuchi/mafiaBot",
       "description": "Created a minimal Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia)",
-      "entity": "Entity",
       "type": "application"
     }
   ]
