@@ -5,7 +5,7 @@
   "basics": {
     "name": "Arjun Adhia",
     "label": "Software Development Engineer",
-    "image": "",
+    "image": "https://avatars.githubusercontent.com/u/9140008?v=4",
     "email": "arjun.adhia@gmail.com",
     "phone": "(704) 658-6570",
     "url": "https://arjun.adhia.net",
@@ -17,7 +17,13 @@
       "countryCode": "US",
       "region": "Washington"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "url": "https://github.com/gapuchi",
+        "username": "gapuchi",
+        "network": "github"
+      }
+    ]
   },
   "work": [
     {
@@ -26,7 +32,7 @@
       "startDate": "2021-04",
       "highlights": [
         "Contributed towards launching AWS EMR Serverless, a new AWS EMR offering. Enables clients to setup an EMR cluster 75% quicker by avoiding the need to setup, maintain, or configure EC2 hosts or EKS clusters.",
-        "Developed one of EMR Serverless control plane components with >99% availability and  >15 TPS at launch that provides nodes to client's distributed application (i.e. Spark and Hive)",
+        "Developed one of EMR Serverless control plane components with >99% availability and >15 TPS at launch that provides nodes to client's distributed application (i.e. Spark and Hive)",
         "Improved clients' applications' start-time by >85% by implementing 2 features:",
         "Added an application configuration to clients that proactively created nodes before application submission.",
         "Evaluated various optimization strategies to reduce OCI images pull times by 90%.",
