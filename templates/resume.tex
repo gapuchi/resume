@@ -48,7 +48,7 @@
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{ {{- education.0.institution -}} } & Chapel Hill, NC\\\end{tabular*}
 
     {%- for area in education %}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{ {% if area.studyType == "Bachelor of Science" %} B.S {{area.area}} (GPA: {{area.score}}) {% else %} Minor {{area.area}} {% endif %} }} &\textit{\small{ {% if loop.first %} {{area.startDate}} -- {{area.endDate}} {% endif %} }}\\\end{tabular*}
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{ {% if area.studyType == "Bachelor of Science" %} B.S {{area.area}} (GPA: {{area.score}}) {% else %} Minor {{area.area}} {% endif %} }} &\textit{\small{ {% if loop.first %} {{area.startDate | date(format="%b %Y")}} -- {{area.endDate | date(format="%b %Y")}} {% endif %} }}\\\end{tabular*}
     {%- endfor %}
 
 \end{itemize}
@@ -58,7 +58,7 @@
 
     {%- for job in work %}
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{ {{- job.name -}} } & Seattle, WA\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{ {{- job.position -}} }} &\textit{\small{ {{- job.startDate}} -- {% if job.endDate %} {{- job.endDate -}} {% else %}Present{% endif %} }}\\\end{tabular*}
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{ {{- job.position -}} }} &\textit{\small{ {{- job.startDate | date(format="%b %Y") }} -- {% if job.endDate %} {{- job.endDate | date(format="%b %Y") -}} {% else %}Present{% endif %} }}\\\end{tabular*}
     
     \begin{itemize}
         {%- for highlight in job.highlights %}

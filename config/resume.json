@@ -6,6 +6,7 @@
     "name": "Arjun Adhia",
     "label": "Software Development Engineer",
     "image": "https://avatars.githubusercontent.com/u/9140008?v=4",
+    "picture": "https://avatars.githubusercontent.com/u/9140008?v=4",
     "email": "arjun.adhia@gmail.com",
     "phone": "(704) 658-6570",
     "url": "https://arjun.adhia.net",
@@ -29,7 +30,7 @@
     {
       "name": "AWS EMR Serverless (Amazon Web Services)",
       "position": "Software Development Engineer",
-      "startDate": "2021-04",
+      "startDate": "2021-04-01",
       "highlights": [
         "Contributed towards launching AWS EMR Serverless, a new AWS EMR offering. Enables clients to setup an EMR cluster 75% quicker by avoiding the need to setup, maintain, or configure EC2 hosts or EKS clusters.",
         "Developed one of EMR Serverless control plane components with >99% availability and >15 TPS at launch that provides nodes to client's distributed application (i.e. Spark and Hive)",
@@ -43,8 +44,8 @@
     {
       "name": "Universal Brand Catalog (Amazon.com)",
       "position": "Software Development Engineer",
-      "startDate": "2021-04",
-      "endDate": "2017-08",
+      "startDate": "2017-08-01",
+      "endDate": "2021-04-01",
       "highlights": [
         "Developed a system that maps over 30 billion products to an Amazon brand database daily to discover products and brands not present in the Amazon Catalog and to determine brands’ selling potentials",
         "Maintained a platform (Crater) built on top of AWS Mechanical Turk to allow users to consolidate worker responses manually, increasing accuracy of responses when compared to the default string comparison",
@@ -56,8 +57,8 @@
     {
       "name": "Advertising Platform (Amazon.com)",
       "position": "Software Development Intern",
-      "startDate": "2016-05",
-      "endDate": "2016-08",
+      "startDate": "2016-05-01",
+      "endDate": "2016-08-01",
       "highlights": [
         "Worked on the Ad Products team to create a page for advertisers to preview their ads collectively",
         "Maintained site consistency by working with a Sr. UX designer to create the page layout and view",
@@ -73,8 +74,8 @@
       "url": "https://institution.com/",
       "area": "Computer Science",
       "studyType": "Bachelor of Science",
-      "startDate": "2013-08",
-      "endDate": "2017-05",
+      "startDate": "2013-08-01",
+      "endDate": "2017-05-01",
       "score": "3.97"
     },
     {
@@ -82,8 +83,8 @@
       "url": "https://institution.com/",
       "area": "Economics",
       "studyType": "Bachelor of Science",
-      "startDate": "2013-08",
-      "endDate": "2017-05",
+      "startDate": "2013-08-01",
+      "endDate": "2017-05-01",
       "score": "4.0"
     },
     {
@@ -91,8 +92,8 @@
       "url": "https://institution.com/",
       "area": "Mathematics",
       "studyType": "Minor",
-      "startDate": "2013-08",
-      "endDate": "2017-05"
+      "startDate": "2013-08-01",
+      "endDate": "2017-05-01"
     }
   ],
   "skills": [
@@ -143,14 +144,14 @@
   "projects": [
     {
       "name": "jsonresume-renderer",
-      "startDate": "2022-06",
+      "startDate": "2022-06-01",
       "url": "https://github.com/gapuchi/jsonresume-renderer",
       "description": "Created a Rust binary that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.",
       "type": "application"
     },
     {
       "name": "mafiaBot",
-      "startDate": "2019-05",
+      "startDate": "2019-05-01",
       "url": "https://github.com/gapuchi/mafiaBot",
       "description": "Created a minimal Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia)",
       "type": "application"
