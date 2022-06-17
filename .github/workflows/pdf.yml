@@ -19,7 +19,7 @@ jobs:
       - name: Generate Latex Doc
         run:  |
           cargo install jsonresume-renderer
-          $HOME/.cargo/bin/jsonresume-renderer $GITHUB_WORKSPACE/config/resume.json $GITHUB_WORKSPACE/templates/resume.tex resume.tex
+          $HOME/.cargo/bin/jsonresume-renderer -j $GITHUB_WORKSPACE/config/resume.json -t $GITHUB_WORKSPACE/templates/resume.tex -o resume.tex
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
