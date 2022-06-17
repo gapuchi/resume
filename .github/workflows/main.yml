@@ -18,8 +18,8 @@ jobs:
 
       - name: Generate Latex Doc
         run:  |
-          cargo install dhall-to-resume
-          $HOME/.cargo/bin/dhall-to-resume $GITHUB_WORKSPACE/config/resume.dhall
+          cargo install jsonresume-renderer
+          $HOME/.cargo/bin/jsonresume-renderer $GITHUB_WORKSPACE/config/resume.json resume.tex
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
