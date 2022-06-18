@@ -7,7 +7,7 @@ This repo generates my resume, using [JSON Resume standard](https://jsonresume.o
 
 ## PDF Generation
 
-A workflow uses the [jsonresume-renderer](https://crates.io/crates/jsonresume-renderer). The JSON resume file and LaTex template file present in this repo are passed to the `jsonresume-renderer` binary, which generates a LaTex file. [github-action-for-latex](https://github.com/marketplace/actions/github-action-for-latex) compiles the generated latex file to a PDF. Both the LaTex and PDF files are uploaded as assets to this repo's releases.
+A workflow uses the [jsonresume-renderer](https://github.com/gapuchi/jsonresume-renderer). The JSON resume file and LaTex template file present in this repo are passed to the `jsonresume-renderer` binary, which generates a LaTex file. [github-action-for-latex](https://github.com/marketplace/actions/github-action-for-latex) compiles the generated latex file to a PDF. Both the LaTex and PDF files are uploaded as assets to this repo's releases.
 
 Check out the [Releases](https://github.com/gapuchi/resume/releases) for my latest resume.
 
