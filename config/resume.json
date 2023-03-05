@@ -29,13 +29,13 @@
   "work": [
     {
       "name": "Amazon EMR Serverless (Amazon Web Services)",
-      "position": "Software Development Engineer",
+      "position": "Software Development Engineer II",
       "startDate": "2021-04-01",
       "highlights": [
-        "Led the design, implementation, and release of custom EMR Serverless images, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices.",
-        "Contributed towards launching AWS EMR Serverless, a new AWS EMR offering. Enables clients to setup an EMR cluster 75% quicker by avoiding the need to setup, maintain, or configure EC2 hosts or EKS clusters.",
+        "Led the design, implementation, and release of custom EMR Serverless images, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices. +100 customers successfully submitted +5000 jobs within the first two months of launch.",
+        "Contributed towards launching AWS EMR Serverless, a new AWS EMR offering which enables clients to setup an EMR cluster 75% faster. This is achieved by avoiding the need to setup, maintain, or configure EC2 hosts or EKS clusters.",
         "Developed one of EMR Serverless control plane components with >99% availability and >15 TPS at launch that provides nodes to client's distributed application (i.e. Spark and Hive)",
-        "Improved clients' applications' start-time by >85% by 1/ adding an application configuration to clients that proactively created nodes before application submission and 2/ evaluated various optimization strategies to reduce OCI images pull times by 90%.",
+        "Improved clients' applications' start-time by >85% by 1/ adding an application configuration to clients that proactively created nodes before application submission and 2/ evaluated various optimization strategies to reduce Docker images pull times by 90%.",
         "Designed a multi-tenant service that enables multiple clients to run applications while ensuring network and compute isolation between clients.",
         "Led the implementation of metrics and creation of monitoring dashboards in parts of EMR Serverless to improve debugging and proactively identify issues."
       ]
@@ -71,20 +71,10 @@
     {
       "institution": "University of North Carolina at Chapel Hill",
       "url": "https://institution.com/",
-      "area": "Computer Science",
+      "area": "Computer Science, Economics",
       "studyType": "Bachelor of Science",
       "startDate": "2013-08-01",
-      "endDate": "2017-05-01",
-      "score": "3.97"
-    },
-    {
-      "institution": "University of North Carolina at Chapel Hill",
-      "url": "https://institution.com/",
-      "area": "Economics",
-      "studyType": "Bachelor of Science",
-      "startDate": "2013-08-01",
-      "endDate": "2017-05-01",
-      "score": "4.0"
+      "endDate": "2017-05-01"
     },
     {
       "institution": "University of North Carolina at Chapel Hill",
