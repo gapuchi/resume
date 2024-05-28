@@ -5,9 +5,6 @@ on:
     tags:
     - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
-env:
-  CARGO_TERM_COLOR: always
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,11 +13,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-      - name: Generate Latex Doc
-        run:  |
-          cargo install jsonresume-renderer
-          $HOME/.cargo/bin/jsonresume-renderer -j $GITHUB_WORKSPACE/config/resume.json -t $GITHUB_WORKSPACE/templates/resume.tex -o resume.tex
-      
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
@@ -36,16 +28,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-
-      - name: Upload Resume LaTex
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./resume.tex
-          asset_name: resume.tex
-          asset_content_type: application/text
       
       - name: Upload Resume PDF
         uses: actions/upload-release-asset@v1
