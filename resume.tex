@@ -38,19 +38,30 @@
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Arjun Adhia} & Email : \href{mailto:arjun.adhia@gmail.com}{arjun.adhia@gmail.com}\\
-\href{https://github.com/gapuchi}{https://github.com/gapuchi} & Mobile : (704) 658-6570 \\
+    \textbf{\Large Arjun Adhia} & Email : \href{mailto:arjun.adhia@gmail.com}{arjun.adhia@gmail.com}\\
+    \href{https://github.com/gapuchi}{https://github.com/gapuchi} & Mobile : (704) 658-6570 \\
 \end{tabular*}
 
 \section{Work Experience}
 \begin{itemize}[leftmargin=0.15in, label={}]
+
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{ModernFi} & New York, NY\\\end{tabular*}
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Senior Software Engineer, Tech Lead}} &\textit{\small{Nov 2023 -- May 2024}}\\\end{tabular*}
+    \begin{itemize}
+        \item\small{Was a founding engineer of ModernFi - a bank deposit network management system. It enables institutions to provide extended insurance, sweep excess funds, and receive funds on demand.}
+        \item\small{Developed the core product, a backend service optimizing insurance coverage and efficiently allocating funds for institutions.}
+        \item\small{Crafted REST APIs tailored to client specifications, facilitating seamless management of funds, depositors, and transactions within the ModernFi ecosystem.}
+        \item\small{Managed database-driven internal ledgering, ensuring robust consistency for balance and interest calculations.}
+        \item\small{Led comprehensive end-to-end testing initiatives to validate product functionality and guarantee SLA under heavy load.}
+        \item\small{Led the design of customer and depositor statement generation, focusing on idempotency and automation. Engineered to produce over 100 PDFs per minute, with scalability to meet increasing customer demands.}
+    \end{itemize}
 
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Amazon Elastic Map Reduce (EMR) Serverless (Amazon Web Services)} & Seattle, WA\\\end{tabular*}
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Founding Engineer, Software Development Engineer II, Tech Lead}} &\textit{\small{Apr 2021 -- Nov 2023}}\\\end{tabular*}
     \begin{itemize}
         \item\small{Was a founding engineer of Amazon EMR Serverless - a new Amazon EMR offering clients to setup an EMR cluster 75\% faster. Eliminates the need to setup, maintain, or configure EC2 hosts or EKS clusters.}
         \item\small{Architected and built a multi-tenant, distributed, backend service that serves as the resource manager for clients' distributed applications' (i.e. Spark and Hive) workers with $>$99.9\% availability.}
-        \item\small{Designed, implemented, and launched EMR Serverless' custom images, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices. 100+ customers successfully submitted 5000+ jobs within the first two months of the launch.}
+        \item\small{Designed, implemented, and launched \href{https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/application-custom-image.html}{EMR Serverless' custom images}, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices. 100+ customers successfully submitted 5000+ jobs within the first two months of the launch.}
         \item\small{Improved container start time by reducing Docker images pull times by 90\%. Worked cross-functionally with other AWS service teams and the Amazon Linux team to upgrade a core Docker dependency to achieve this.}
         \item\small{Implemented pre-initialized capacity support, a feature to reduce application start time, on EMR Serverless' resource manager service.}
         \item\small{Currently collaborating with downstream services to overcome capacity constraints brought on by heavy users, those who consumed at least 4,000 vCPU's concurrently, of EMR Serverless.}
@@ -67,23 +78,23 @@
         \item\small{Coordinated the handoff of an internal platform to another team and documented parity requirements for their effort to consolidate with their own platform to unify functionality across multiple orgs.}
     \end{itemize}
 
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Advertising Platform (Amazon.com)} & Seattle, WA\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Intern}} &\textit{\small{May 2016 -- Aug 2016}}\\\end{tabular*}
-    \begin{itemize}
-        \item\small{Worked on the Ad Products team to create a page for advertisers to preview their ads collectively}
-        \item\small{Maintained the site's UX consistency by working with a Sr. UX designer to create the page layout and view}
-        \item\small{Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads}
-        \item\small{Deployed the project into production and documented my work for future maintainance}
-    \end{itemize}
+    % \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Advertising Platform (Amazon.com)} & Seattle, WA\\\end{tabular*}
+    % \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Intern}} &\textit{\small{May 2016 -- Aug 2016}}\\\end{tabular*}
+    % \begin{itemize}
+    %     \item\small{Worked on the Ad Products team to create a page for advertisers to preview their ads collectively}
+    %     \item\small{Maintained the site's UX consistency by working with a Sr. UX designer to create the page layout and view}
+    %     \item\small{Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads}
+    %     \item\small{Deployed the project into production and documented my work for future maintainance}
+    % \end{itemize}
 
 \end{itemize}
 
 \section{Open Source Projects}
 \begin{tabular*}{\textwidth}{p{0.30\linewidth}p{0.65\linewidth}}
     \small{\textbf{\href{https://github.com/awslabs/amazon-emr-serverless-image-cli}{amazon-emr-serverlessimage-cli}}} & \small{Maintainer of an open source repo for the Amazon EMR Serverless' Custom Image feature validation tool.}\\
-    \small{\textbf{\href{https://github.com/awslabs/amazon-ecr-containerd-resolver/pull/35}{amazon-ecr-containerd-resolver}}} & \small{Contributed by adding zstd compression support to a community-maintained OCI image resolver backed by AWS ECR APIs. Enables users to work with zstd compressed images, which can be pulled faster than default gzip compressed images.}\\
-    \small{\textbf{\href{https://github.com/gapuchi/jsonresume-renderer}{jsonresume-renderer}}} & \small{Developed a Rust application that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.}\\
-    \small{\textbf{\href{https://github.com/gapuchi/mafiaBot}{mafiaBot}}} & \small{Created a Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia).}\\
+    \small{\textbf{\href{https://github.com/awslabs/amazon-ecr-containerd-resolver/pull/35}{amazon-ecr-containerd-resolver}}} & \small{Contributed by adding zstd compression support to a community-maintained OCI image resolver backed by AWS ECR APIs.}\\
+    % \small{\textbf{\href{https://github.com/gapuchi/jsonresume-renderer}{jsonresume-renderer}}} & \small{Developed a Rust application that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.}\\
+    % \small{\textbf{\href{https://github.com/gapuchi/mafiaBot}{mafiaBot}}} & \small{Created a Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia).}\\
 \end{tabular*}
 
 \section{Education}
@@ -94,9 +105,9 @@
 
 \section{Technologies}
 \begin{tabular*}{\textwidth}{p{0.12\linewidth}p{0.88\linewidth}}
-    \small{\textbf{Languages}} & \small{GoLang | Java | Python | Scala | TypeScript | SQL | Rust | C/C++}\\
+    \small{\textbf{Languages}} & \small{GoLang | Java | Python | TypeScript | Scala | SQL | Rust | C/C++}\\
     \small{\textbf{AWS}} & \small{ECS | ECR | Fargate | Lambda | Step Function | DynamoDB | CloudFormation | CloudWatch | S3 | CDK | IAM | KMS | VPC}\\
-    \small{\textbf{Tooling}} & \small{Docker + containerd | Apache Spark | Spring | Guice | React | CI/CD}\\
+    \small{\textbf{Tooling}} & \small{Docker + containerd | Apache Spark | Spring | Guice | React | Smithy | CI/CD}\\
 \end{tabular*}
 
 \end{document}
