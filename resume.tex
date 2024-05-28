@@ -26,7 +26,7 @@
 
 % titlesec config
 \titleformat{\section}{
-\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\vspace{-10pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % tabular config
 \setlength{\tabcolsep}{0in}
@@ -38,49 +38,40 @@
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\href{https://arjun.adhia.net}{\Large Arjun Adhia}} & Email : \href{mailto:arjun.adhia@gmail.com}{arjun.adhia@gmail.com}\\
-\href{https://arjun.adhia.net}{https://arjun.adhia.net} & Mobile : (704) 658-6570 \\
+\textbf{\Large Arjun Adhia} & Email : \href{mailto:arjun.adhia@gmail.com}{arjun.adhia@gmail.com}\\
+\href{https://github.com/gapuchi}{https://github.com/gapuchi} & Mobile : (704) 658-6570 \\
 \end{tabular*}
-
-\section{Education}
-\begin{itemize}[leftmargin=0.15in, label={}]
-
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{University of North Carolina at Chapel Hill} & Chapel Hill, NC\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{  B.S Computer Science, Economics  }} &\textit{\small{  Aug 2013 -- May 2017  }}\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{  Minor Mathematics  }} &\textit{\small{  }}\\\end{tabular*}
-
-\end{itemize}
 
 \section{Work Experience}
 \begin{itemize}[leftmargin=0.15in, label={}]
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Amazon EMR Serverless (Amazon Web Services)} & Seattle, WA\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Engineer II}} &\textit{\small{Apr 2021 -- Present }}\\\end{tabular*}
-    
+
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Amazon Elastic Map Reduce (EMR) Serverless (Amazon Web Services)} & Seattle, WA\\\end{tabular*}
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Founding Engineer, Software Development Engineer II, Tech Lead}} &\textit{\small{Apr 2021 -- Nov 2023}}\\\end{tabular*}
     \begin{itemize}
-        \item\small{Led the design, implementation, and release of custom EMR Serverless images, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices. +100 customers successfully submitted +5000 jobs within the first two months of launch.}
-        \item\small{Contributed towards launching AWS EMR Serverless, a new AWS EMR offering which enables clients to setup an EMR cluster 75\% faster. This is achieved by avoiding the need to setup, maintain, or configure EC2 hosts or EKS clusters.}
-        \item\small{Developed one of EMR Serverless control plane components with $>$99\% availability and $>$15 TPS at launch that provides nodes to client's distributed application (i.e. Spark and Hive)}
-        \item\small{Improved clients' applications' start-time by $>$85\% by 1/ adding an application configuration to clients that proactively created nodes before application submission and 2/ evaluated various optimization strategies to reduce Docker images pull times by 90\%.}
-        \item\small{Designed a multi-tenant service that enables multiple clients to run applications while ensuring network and compute isolation between clients.}
-        \item\small{Led the implementation of metrics and creation of monitoring dashboards in parts of EMR Serverless to improve debugging and proactively identify issues.}
+        \item\small{Was a founding engineer of Amazon EMR Serverless - a new Amazon EMR offering clients to setup an EMR cluster 75\% faster. Eliminates the need to setup, maintain, or configure EC2 hosts or EKS clusters.}
+        \item\small{Architected and built a multi-tenant, distributed, backend service that serves as the resource manager for clients' distributed applications' (i.e. Spark and Hive) workers with $>$99.9\% availability.}
+        \item\small{Designed, implemented, and launched EMR Serverless' custom images, enabling customers to install/configure packages optimized for their workloads and integrate with current CI/CD best practices. 100+ customers successfully submitted 5000+ jobs within the first two months of the launch.}
+        \item\small{Improved container start time by reducing Docker images pull times by 90\%. Worked cross-functionally with other AWS service teams and the Amazon Linux team to upgrade a core Docker dependency to achieve this.}
+        \item\small{Implemented pre-initialized capacity support, a feature to reduce application start time, on EMR Serverless' resource manager service.}
+        \item\small{Currently collaborating with downstream services to overcome capacity constraints brought on by heavy users, those who consumed at least 4,000 vCPU's concurrently, of EMR Serverless.}
+        \item\small{Led the implementation of operational metrics collection and monitoring dashboards in parts of EMR Serverless to improve debugging and proactively identify issues.}
     \end{itemize}
+
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Universal Brand Catalog (Amazon.com)} & Seattle, WA\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Engineer}} &\textit{\small{Aug 2017 -- Apr 2021 }}\\\end{tabular*}
-    
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Engineer}} &\textit{\small{Aug 2017 -- Apr 2021}}\\\end{tabular*}
     \begin{itemize}
-        \item\small{Developed a system that maps over 30 billion products to an Amazon brand database daily to discover products and brands not present in the Amazon Catalog and to determine brands’ selling potentials}
-        \item\small{Maintained a platform (Crater) built on top of AWS Mechanical Turk to allow users to consolidate worker responses manually, increasing accuracy of responses when compared to the default string comparison}
-        \item\small{Developed a Crater feature to allow users to choose which workers gets paid, saving the original costs of paying all workers, regardless of their responses’ quality}
-        \item\small{Developed a Crater feature to retrieve responses before all questions (1000+ per batch) were answered, reducing the wait time from days to minutes for downstream consumers}
-        \item\small{Coordinated the handoff of Crater to another team and documented parity requirements for their effort to consolidate Crater with their own platform to unify functionality across the Selection Monitoring org}
+        \item\small{Developed a system that maps over 30 billion products to an internal brands database daily to discover products and brands not present in the Amazon Catalog and to determine brands' selling potentials.}
+        \item\small{Maintained a platform built on top of AWS Mechanical Turk to allow users to consolidate worker responses manually, increasing accuracy of responses when compared to the default string comparison.}
+        \item\small{Developed a feature to allow users to choose if a workers gets paid based on quality, reducing our users' costs.}
+        \item\small{Developed a feature to retrieve responses before all questions (1000+ per batch) were answered, reducing the wait time from days to minutes for downstream consumers}
+        \item\small{Coordinated the handoff of an internal platform to another team and documented parity requirements for their effort to consolidate with their own platform to unify functionality across multiple orgs.}
     \end{itemize}
+
     \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{Advertising Platform (Amazon.com)} & Seattle, WA\\\end{tabular*}
-    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Intern}} &\textit{\small{May 2016 -- Aug 2016 }}\\\end{tabular*}
-    
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{Software Development Intern}} &\textit{\small{May 2016 -- Aug 2016}}\\\end{tabular*}
     \begin{itemize}
         \item\small{Worked on the Ad Products team to create a page for advertisers to preview their ads collectively}
-        \item\small{Maintained site consistency by working with a Sr. UX designer to create the page layout and view}
-        \item\small{Ensured highest usability of the application by seeking feedback from stakeholders from 3 other teams}
+        \item\small{Maintained the site's UX consistency by working with a Sr. UX designer to create the page layout and view}
         \item\small{Used Java and React JS to create a dynamic webpage that easily scales to show 100+ ads}
         \item\small{Deployed the project into production and documented my work for future maintainance}
     \end{itemize}
@@ -88,18 +79,24 @@
 \end{itemize}
 
 \section{Open Source Projects}
-\begin{tabular*}{\textwidth}{p{0.20\linewidth}p{0.75\linewidth}}
-    \small{\textbf{jsonresume-renderer}} & \small{Created a Rust binary that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.}\\
-    \small{\textbf{mafiaBot}} & \small{Created a minimal Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia)}\\
-
+\begin{tabular*}{\textwidth}{p{0.30\linewidth}p{0.65\linewidth}}
+    \small{\textbf{\href{https://github.com/awslabs/amazon-emr-serverless-image-cli}{amazon-emr-serverlessimage-cli}}} & \small{Maintainer of an open source repo for the Amazon EMR Serverless' Custom Image feature validation tool.}\\
+    \small{\textbf{\href{https://github.com/awslabs/amazon-ecr-containerd-resolver/pull/35}{amazon-ecr-containerd-resolver}}} & \small{Contributed by adding zstd compression support to a community-maintained OCI image resolver backed by AWS ECR APIs. Enables users to work with zstd compressed images, which can be pulled faster than default gzip compressed images.}\\
+    \small{\textbf{\href{https://github.com/gapuchi/jsonresume-renderer}{jsonresume-renderer}}} & \small{Developed a Rust application that takes in a JSON Resume file and a template to render a resume file. Used this library to generate my resume in LaTex.}\\
+    \small{\textbf{\href{https://github.com/gapuchi/mafiaBot}{mafiaBot}}} & \small{Created a Python bot on Discord so members can randomly generate teams and assigns roles for specific role-playing games (e.g. mafia).}\\
 \end{tabular*}
+
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{University of North Carolina at Chapel Hill} & Chapel Hill, NC\\\end{tabular*}
+    \item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textit{\small{  B.S Computer Science, Economics | Mathematics Minor }} &\textit{\small{  Aug 2013 -- May 2017  }}\\\end{tabular*}
+\end{itemize}
 
 \section{Technologies}
 \begin{tabular*}{\textwidth}{p{0.12\linewidth}p{0.88\linewidth}}
-    \small{\textbf{Languages}} & \small{Java | Scala | TypeScript | Python | GoLang | Rust | SQL | JavaScript | C/C++}\\
+    \small{\textbf{Languages}} & \small{GoLang | Java | Python | Scala | TypeScript | SQL | Rust | C/C++}\\
     \small{\textbf{AWS}} & \small{ECS | ECR | Fargate | Lambda | Step Function | DynamoDB | CloudFormation | CloudWatch | S3 | CDK | IAM | KMS | VPC}\\
     \small{\textbf{Tooling}} & \small{Docker + containerd | Apache Spark | Spring | Guice | React | CI/CD}\\
-
 \end{tabular*}
 
 \end{document}
