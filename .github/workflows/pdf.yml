@@ -41,3 +41,9 @@ jobs:
           asset_path: result/resume.pdf
           asset_name: resume.pdf
           asset_content_type: application/pdf
+
+      - name: Remove Older Releases
+        uses: wow-actions/delete-stale-releases@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          keep_latest_count: 1
